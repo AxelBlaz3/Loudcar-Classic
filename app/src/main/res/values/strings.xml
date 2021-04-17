@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Loudcar</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="find_device">Find Device</string>
+    <string name="font_family">Font family</string>
+    <string name="speed">Speed</string>
+    <string name="reverse_text">Reverse Text</string>
+    <string name="direction">Direction</string>
+    <string name="add_more_effects_summary">*We Will Add More Effects Soon :)</string>
+    <string name="other_devices">Other devices</string>
+    <string name="control_with_voice">Control With Voice</string>
+    <string name="connect_easily">Connect Easily</string>
+    <string name="set_manually">Set manually</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="proceed">Proceed</string>
+    <string name="find_devices">Find Devices</string>
+    <string name="saved_devices">Saved Devices</string>
+    <string name="text_animation">Text Animation</string>
+    <string name="font_style">Font Style</string>
+    <string name="effects">Effects</string>
+    <string name="reset_all">Reset All</string>
+    <string name="max_led_texts_toast_msg">You can add atmost 8 texts</string>
+    <string name="none">None</string>
+    <string name="right_to_left">Right to Left</string>
+    <string name="left_to_right">Left to Right</string>
+    <string name="bottom_to_top">Bottom to Top</string>
+    <string name="top_to_bottom">Top to Bottom</string>
+    <string name="font_default">Default</string>
+    <string name="arial">Arial</string>
+    <string name="avenir">Avenir</string>
+    <string name="poppins">Poppins</string>
+    <string name="san_serif">San Serif</string>
+    <string name="ble_not_supported">BLE isn\'t supported on this device</string>
+    <string name="preview">PREVIEW</string>
+    <string name="listening">Listening…</string>
+    <string name="filter_view_ledtext_loudcar">LedText Filter</string>
+    <string name="select_device">Select device</string>
+    <string name="send">Send</string>
+    <string name="communication_failed">Communication failed</string>
+    <string name="connect_failed">Connection failed</string>
+    <string name="connect_timeout">Connect timeout</string>
+    <string name="socket_invalid">Socket invalid</string>
+    <string name="send_c">Send c</string>
+    <string name="border_text">Border</string>
+    <string name="flash_text">Flash</string>
+    <string name="brightness">Brightness</string>
+
+    <string-array name="fonts_array">
+        <item>Default</item>
+        <item>San serif</item>
+        <item>Poppins</item>
+        <item>Avenir</item>
+        <item>Arial</item>
+    </string-array>
+
+    <string-array name="LoudcarQueries">
+        <item>open loudcar</item>
+        <item>open loudcar and send $ledText to LED</item>
+        <item>use loudcar to send $ledText</item>
+        <item>send $ledText from loudcar to LED</item>
+        <item>send $ledText to LED from loudcar</item>
+        <item>send $ledText to LED</item>
+        <item>send $ledText from loudcar</item>
+        <item>show $ledText on LED</item>
+    </string-array>
+
+</resources>

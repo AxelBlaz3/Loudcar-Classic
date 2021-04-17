@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_3"
+                android:layout_marginTop="@dimen/grid_3"
+                app:layout_constraintBottom_toBottomOf="@+id/find_devices_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="?shapeAppearanceSmallComponent"
+                app:strokeColor="?colorControlNormal"
+                app:strokeWidth="2dp">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/bluetooth_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/grid_1"
+                    android:paddingEnd="@dimen/grid_1"
+                    android:text="@string/bluetooth"
+                    android:thumb="@drawable/switch_thumb"
+                    app:switchPadding="@dimen/grid_1"
+                    app:switchTextAppearance="?textAppearanceSubtitle2"
+                    app:track="@drawable/switch_track"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/find_devices_button"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_3"
+                android:layout_marginEnd="@dimen/grid_3"
+                android:paddingTop="@dimen/grid_1_5"
+                android:paddingBottom="@dimen/grid_1_5"
+                android:text="@string/find_device"
+                android:textAllCaps="false"
+                android:textColor="?colorOnSecondary"
+                app:backgroundTint="?colorSecondary"
+                app:icon="@drawable/ic_round_search_24"
+                app:iconGravity="end"
+                app:iconTint="?colorOnSecondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/preview_bg_iv"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="@dimen/grid_3"
+                android:layout_marginTop="@dimen/grid_2"
+                android:layout_marginEnd="@dimen/grid_3"
+                app:cardBackgroundColor="@color/grey"
+                app:cardCornerRadius="@dimen/grid_1"
+                app:layout_constraintTop_toBottomOf="@id/find_devices_button">
+
+                <TextView
+                    android:id="@+id/led_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center|start"
+                    android:layout_marginStart="@dimen/grid_3"
+                    android:layout_marginEnd="@dimen/grid_3"
+                    android:fontFamily="@font/advanced_dot_digital_7"
+                    android:gravity="start|center"
+                    android:singleLine="true"
+                    android:text="@string/preview"
+                    android:textAppearance="?textAppearanceHeadline4"
+                    android:textColor="#BDAA4A"
+                    app:layout_constraintBottom_toBottomOf="@id/preview_bg_iv"
+                    app:layout_constraintStart_toStartOf="@id/preview_bg_iv"
+                    app:layout_constraintTop_toTopOf="@id/preview_bg_iv" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/font_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_3"
+                android:layout_marginTop="@dimen/grid_2"
+                android:layout_marginEnd="@dimen/grid_3"
+                app:cardBackgroundColor="@color/purple_400"
+                app:layout_constraintTop_toBottomOf="@id/preview_bg_iv">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/grid_2"
+                    android:paddingTop="@dimen/grid_1"
+                    android:paddingEnd="@dimen/grid_2"
+                    android:paddingBottom="@dimen/grid_1">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/font_family"
+                        android:textAllCaps="true"
+                        android:textAppearance="?textAppearanceSubtitle1"
+                        android:textColor="?colorOnSecondary"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/materialCardView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grid_2"
+                        android:layout_marginEnd="@dimen/grid_2"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/font_dropdown"
+                        app:layout_constraintStart_toEndOf="@+id/textView"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearance="?shapeAppearanceMediumComponent">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/fonts_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/grid_1"
+                            android:paddingBottom="@dimen/grid_1" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/font_dropdown"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearance="@style/ShapeAppearance.Loudcar.Round"
+                        app:srcCompat="@drawable/ic_round_keyboard_arrow_down_24"
+                        app:tint="?colorSecondary" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/speed_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_3"
+                android:layout_marginTop="@dimen/grid_2"
+                android:layout_marginEnd="@dimen/grid_3"
+                app:layout_constraintTop_toBottomOf="@id/font_card"
+                app:strokeColor="?colorSecondary"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/grid_1">
+
+                    <TextView
+                        android:id="@+id/speed_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grid_2"
+                        android:layout_marginEnd="@dimen/grid_2"
+                        android:text="@string/speed"
+                        android:textAllCaps="true"
+                        android:textAppearance="?textAppearanceSubtitle1"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/decrease_speed_iv"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?actionBarItemBackground"
+                        app:layout_constraintBottom_toBottomOf="@+id/speed_slider"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/speed_tv"
+                        app:srcCompat="@drawable/noun_tortoise_77078" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/speed_slider"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:stepSize="1"
+                        android:valueFrom="1"
+                        android:valueTo="7"
+                        app:layout_constraintEnd_toStartOf="@id/increase_speed_iv"
+                        app:layout_constraintStart_toEndOf="@+id/decrease_speed_iv"
+                        app:layout_constraintTop_toBottomOf="@+id/speed_tv"
+                        app:thumbColor="?colorSecondary"
+                        app:trackColorActive="?colorSecondary"
+                        app:trackColorInactive="@color/grey" />
+
+                    <ImageButton
+                        android:id="@+id/increase_speed_iv"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?actionBarItemBackground"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/speed_tv"
+                        app:srcCompat="@drawable/noun_hare_210728" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/brightness_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_3"
+                android:layout_marginTop="@dimen/grid_2"
+                android:layout_marginEnd="@dimen/grid_3"
+                app:layout_constraintTop_toBottomOf="@id/speed_card"
+                app:strokeColor="?colorSecondary"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/grid_1">
+
+                    <TextView
+                        android:id="@+id/brightness_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grid_2"
+                        android:layout_marginEnd="@dimen/grid_2"
+                        android:text="@string/brightness"
+                        android:textAllCaps="true"
+                        android:textAppearance="?textAppearanceSubtitle1"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/low_brightness_iv"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?actionBarItemBackground"
+                        app:layout_constraintBottom_toBottomOf="@+id/brightness_slider"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:tint="?colorSecondary"
+                        app:layout_constraintTop_toBottomOf="@id/brightness_tv"
+                        app:srcCompat="@drawable/ic_baseline_dark_mode_24" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/brightness_slider"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:stepSize="1"
+                        android:valueFrom="1"
+                        android:value="5"
+                        android:valueTo="5"
+                        app:layout_constraintEnd_toStartOf="@id/high_brightness_iv"
+                        app:layout_constraintStart_toEndOf="@+id/low_brightness_iv"
+                        app:layout_constraintTop_toBottomOf="@+id/brightness_tv"
+                        app:thumbColor="?colorSecondary"
+                        app:trackColorActive="?colorSecondary"
+                        app:trackColorInactive="@color/grey" />
+
+                    <ImageButton
+                        android:id="@+id/high_brightness_iv"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?actionBarItemBackground"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:tint="?colorSecondary"
+                        app:layout_constraintTop_toBottomOf="@+id/brightness_tv"
+                        app:srcCompat="@drawable/ic_baseline_light_mode_24" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/reverse_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_3"
+                android:layout_marginTop="@dimen/grid_2"
+                android:layout_marginEnd="@dimen/grid_3"
+                app:layout_constraintTop_toBottomOf="@+id/brightness_card"
+                app:strokeColor="?colorSecondary"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/reverse_text_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grid_2"
+                        android:text="@string/reverse_text"
+                        android:textAllCaps="true"
+                        android:textAppearance="?textAppearanceSubtitle1"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/reverse_text_switch"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/reverse_text_switch"
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/grid_1_5"
+                        android:thumb="@drawable/switch_thumb"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:track="@drawable/switch_track" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/border_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_3"
+                android:layout_marginTop="@dimen/grid_2"
+                android:layout_marginEnd="@dimen/grid_3"
+                app:layout_constraintTop_toBottomOf="@+id/reverse_card"
+                app:strokeColor="?colorSecondary"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/border_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grid_2"
+                        android:text="@string/border_text"
+                        android:textAllCaps="true"
+                        android:textAppearance="?textAppearanceSubtitle1"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/border_switch"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/border_switch"
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/grid_1_5"
+                        android:thumb="@drawable/switch_thumb"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:track="@drawable/switch_track" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/flash_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_3"
+                android:layout_marginTop="@dimen/grid_2"
+                android:layout_marginEnd="@dimen/grid_3"
+                app:layout_constraintTop_toBottomOf="@+id/border_card"
+                app:strokeColor="?colorSecondary"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/flash_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grid_2"
+                        android:text="@string/flash_text"
+                        android:textAllCaps="true"
+                        android:textAppearance="?textAppearanceSubtitle1"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/flash_switch"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/flash_switch"
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/grid_1_5"
+                        android:thumb="@drawable/switch_thumb"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:track="@drawable/switch_track" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/direction_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_3"
+                android:layout_marginTop="@dimen/grid_2"
+                android:layout_marginEnd="@dimen/grid_3"
+                app:layout_constraintTop_toBottomOf="@+id/flash_card"
+                app:strokeColor="?colorSecondary"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/direction_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/grid_2"
+                        android:layout_marginTop="@dimen/grid_1"
+                        android:layout_marginBottom="@dimen/grid_1"
+                        android:text="@string/direction"
+                        android:textAllCaps="true"
+                        android:textAppearance="?textAppearanceSubtitle1"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/direct_bottom_iv"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="@dimen/grid_2"
+                        android:background="?colorControlHighlight"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearance="@style/ShapeAppearance.Loudcar.Round"
+                        app:srcCompat="@drawable/ic_round_keyboard_arrow_down_24"
+                        app:tint="@color/white" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/direct_top_iv"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="@dimen/grid_1"
+                        android:background="?colorControlHighlight"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/direct_bottom_iv"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearance="@style/ShapeAppearance.Loudcar.Round"
+                        app:srcCompat="@drawable/ic_round_keyboard_arrow_up_24"
+                        app:tint="@color/white" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/direct_right_iv"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="@dimen/grid_1"
+                        android:background="?colorControlHighlight"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/direct_top_iv"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearance="@style/ShapeAppearance.Loudcar.Round"
+                        app:srcCompat="@drawable/ic_round_keyboard_arrow_right_24"
+                        app:tint="@color/white" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/direct_left_iv"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="@dimen/grid_1"
+                        android:background="?colorSecondary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/direct_right_iv"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearance="@style/ShapeAppearance.Loudcar.Round"
+                        app:srcCompat="@drawable/ic_round_keyboard_arrow_left_24"
+                        app:tint="@color/white" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/preview_edit_text_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_1"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/direction_card"
+                tools:listitem="@layout/preview_edit_text_item" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/new_led_text_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/preview_edit_text_rv"
+                app:srcCompat="@drawable/ic_baseline_add_24" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/send_led_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_3"
+                android:layout_marginBottom="144dp"
+                android:gravity="center"
+                android:text="@string/send"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/new_led_text_fab" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

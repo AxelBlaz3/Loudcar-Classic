@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bluetooth_devices_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/bluetooth_device_item" />
+
+        <TextView
+            android:id="@+id/other_devices_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/grid_2"
+            android:layout_marginTop="@dimen/grid_1"
+            android:gravity="center"
+            android:text="@string/other_devices"
+            android:textAllCaps="true"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bluetooth_devices_recycler_view" />
+
+        <ImageView
+            android:id="@+id/loading_devices_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/other_devices_tv"
+            app:layout_constraintStart_toEndOf="@id/other_devices_tv"
+            app:layout_constraintTop_toTopOf="@id/other_devices_tv"
+            app:srcCompat="@drawable/ic_round_sync_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

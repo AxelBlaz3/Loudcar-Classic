@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.Loudcar.MainTitle" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/helvetica_neue_bold</item>
+        <item name="android:textColor">@color/purple_400</item>
+    </style>
+
+    <style name="TextAppearance.Loudcar.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextAppearance.Loudcar.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+    </style>
+
+    <style name="TextAppearance.Loudcar.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextAppearance.Loudcar.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="TextAppearance.Loudcar.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextAppearance.Loudcar.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextAppearance.Loudcar.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/nunito_semi_bold</item>
+    </style>
+
+    <style name="TextAppearance.Loudcar.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextAppearance.Loudcar.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+</resources>

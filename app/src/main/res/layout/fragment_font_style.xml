@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="preferenceName"
+            type="String" />
+    </data>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/grid_1">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/default_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:paddingHorizontal="@dimen/grid_2"
+            android:text="@string/font_default"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.Loudcar.Subtitle1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/san_serif_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:paddingHorizontal="@dimen/grid_2"
+            android:text="@string/san_serif"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.Loudcar.Subtitle1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/poppins_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:paddingHorizontal="@dimen/grid_2"
+            android:text="@string/poppins"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.Loudcar.Subtitle1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/avenir_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:paddingHorizontal="@dimen/grid_2"
+            android:text="@string/avenir"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.Loudcar.Subtitle1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/arial_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:paddingHorizontal="@dimen/grid_2"
+            android:text="@string/arial"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.Loudcar.Subtitle1"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RadioGroup>
+</layout>

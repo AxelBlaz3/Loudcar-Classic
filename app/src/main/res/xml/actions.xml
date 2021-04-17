@@ -1,0 +1,13 @@
+<?xml version ="1.0" encoding ="utf-8"?><!--  Learn More about how to use App Actions: https://developer.android.com/guide/actions/index.html -->
+<actions>
+    <action intentName="actions.intent.GET_THING">
+        <fulfillment urlTemplate="https://loudcar.page.link/send{?query}">
+            <parameter-mapping
+                intentParameter="thing.name"
+                required="true"
+                urlParameter="query" />
+        </fulfillment>
+
+        <fulfillment urlTemplate="https://loudcar.page.link/fallback" />
+    </action>
+</actions>

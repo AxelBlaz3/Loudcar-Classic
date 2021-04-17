@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/effect_none"
+            layout="@layout/effect_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/grid_3"
+            android:layout_marginTop="@dimen/grid_3"
+            app:effectName='@{"None"}'
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/effect_blink"
+            layout="@layout/effect_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_3"
+            app:effectName='@{"Snow"}'
+            app:layout_constraintStart_toEndOf="@+id/effect_none"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/effect_snow"
+            layout="@layout/effect_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_3"
+            app:effectName='@{"Blink"}'
+            app:layout_constraintStart_toEndOf="@+id/effect_blink"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/add_more_effects_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?actionBarSize"
+            android:gravity="center"
+            android:text="@string/add_more_effects_summary"
+            android:textAppearance="?textAppearanceSubtitle1"
+            android:textColor="?colorSecondary"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/effect_none" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

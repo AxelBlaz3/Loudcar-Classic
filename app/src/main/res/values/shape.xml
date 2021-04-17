@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ShapeAppearance.Loudcar.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/small_component_corner_size</item>
+    </style>
+
+    <style name="ShapeAppearance.Loudcar.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/medium_component_corner_size</item>
+    </style>
+
+    <style name="ShapeAppearance.Loudcar.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/large_component_corner_size</item>
+    </style>
+
+    <style name="ShapeAppearance.Loudcar.Round" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <dimen name="small_component_corner_size">4dp</dimen>
+    <dimen name="medium_component_corner_size">8dp</dimen>
+    <dimen name="large_component_corner_size">16dp</dimen>
+</resources>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="hideBottomBar"
+            type="Boolean" />
+
+        <variable
+            name="hideTitle"
+            type="Boolean" />
+
+        <variable
+            name="hideLogo"
+            type="Boolean" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="hideNavigationIcon"
+            type="Boolean" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:navGraph="@navigation/nav_graph"
+            tools:layout="@layout/fragment_home" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="2dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:contentInsetStartWithNavigation="0dp"
+                app:navigationIcon='@{hideNavigationIcon ? null : @drawable/ic_round_arrow_back_ios_24}'
+                app:layout_scrollFlags="scroll|enterAlways"
+                tools:navigationIcon="@null">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="@dimen/grid_2"
+                    android:layout_marginStart="@dimen/grid_3"
+                    android:visibility="@{hideLogo ? View.GONE : View.VISIBLE}"
+                    app:srcCompat="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{hideTitle ? View.GONE : View.VISIBLE}"
+                    android:text="@{title}"
+                    android:textAppearance="@style/TextAppearance.Loudcar.MainTitle"/>
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/bottom_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="@dimen/grid_3"
+            android:visibility="@{hideBottomBar ? View.GONE : View.VISIBLE}"
+            app:cardBackgroundColor="#f2f2f2"
+            app:shapeAppearance="@style/ShapeAppearance.Loudcar.Round">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/home"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="@dimen/grid_1"
+                    android:layout_marginBottom="@dimen/grid_1"
+                    android:layout_marginStart="@dimen/grid_2"
+                    android:background="?selectableItemBackground"
+                    app:srcCompat="@drawable/home" />
+
+                <ImageButton
+                    android:id="@+id/speech_recognition"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="@dimen/grid_1"
+                    android:layout_marginBottom="@dimen/grid_1"
+                    android:layout_marginStart="@dimen/grid_2"
+                    android:layout_marginEnd="@dimen/grid_2"
+                    android:background="?selectableItemBackground"
+                    app:srcCompat="@drawable/noun_voice_3594010"
+                    app:tint="?colorControlNormal" />
+
+                <ImageButton
+                    android:id="@+id/settings"
+                    android:layout_width="48dp"
+                    android:layout_marginBottom="@dimen/grid_1"
+                    android:layout_marginEnd="@dimen/grid_2"
+                    android:layout_marginTop="@dimen/grid_1"
+                    android:background="?selectableItemBackground"
+                    android:layout_height="48dp"
+                    app:srcCompat="@drawable/noun_filter_582853" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
